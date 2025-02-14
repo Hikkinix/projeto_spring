@@ -17,13 +17,15 @@ public class Game {
     private Integer year;
     @Column(name = "game_genre")
     private String genre;
-    @Column(name = "game_platform")
+    @Column(name = "game_score")
+    private String score;
+    @Column(name = "game_platforms")
     private String platform;
     @Column(name = "game_imgUrl")
     private String imgUrl;
-    @Column(name = "game_description")
+    @Column(name = "game_short_description", columnDefinition = "TEXT")
     private String description;
-    @Column(name = "game_description_detail")
+    @Column(name = "game_long_description", columnDefinition = "TEXT")
     private String descriptionDetail;
 
     public Game(){
