@@ -1,6 +1,7 @@
 package com.praticas.gameslist.dto.game;
 
 import com.praticas.gameslist.entities.Game;
+import com.praticas.gameslist.projection.GameMinProjection;
 
 import java.io.Serializable;
 
@@ -21,6 +22,14 @@ public class GameResponse implements Serializable {
         this.year = game.getYear()  ;
         this.imgUrl = game.getImgUrl();
         this.description = game.getDescription();
+    }
+
+    public GameResponse(GameMinProjection game) {
+        this.id = game.getId();
+        this.title = game.getTitle();
+        this.year = game.getYear()  ;
+        this.imgUrl = game.getImgUrl();
+        this.description = game.getShortDescription();
     }
 
     public Long getId() {

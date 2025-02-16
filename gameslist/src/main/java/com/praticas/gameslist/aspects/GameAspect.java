@@ -10,7 +10,7 @@ public class GameAspect {
 
     @Before("execution(* com.praticas.gameslist.services.*.findAll*(..))")
     public void registrarLog() {
-        System.out.println("Consulta Reaelizada com sucesso");
+        System.out.println("Aspecto: Consulta Reaelizada com sucesso");
     }
 
 }
